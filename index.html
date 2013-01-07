@@ -47,8 +47,23 @@
 
       <section id="main_content">
         <form action="#">
-          <h3>Antrag zur Briefwahl, für die <select id="wahl"></select></h3>
+          <h3>Antrag zur Briefwahl, für die <select id="wahl" name="wahl"></select></h3>
 
+          <p>Meine Stadt/Gemeinde:</p>
+          <select id="gemeinde" name="gemeinde"></select>
+
+          <p>1. Vollst&auml;ndiger Name, Vorname:</p>
+          <input type="TEXT" id="name" name="name" />
+          <p>2. Geburtsdatum:</p>
+          <input type="TEXT" id="datum" name="datum" />
+          <p>3. die Wohnungsanschrift (Meldeadresse)</p>
+          <input type="TEXT" id="adresse" name="adresse" />
+          <p>4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen</p>
+          <input type="TEXT" id="versand" name="versand" />
+
+          <h3>Die fertige eMail</h3>
+          <textarea rows="15" name="textarea" id="textarea"></textarea>
+          <input type="BUTTON" id="senden" value="eMail mit eMailprogramm versenden" />
         </form>
       </section>
 
