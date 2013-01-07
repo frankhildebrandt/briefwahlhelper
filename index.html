@@ -16,7 +16,12 @@
       $(document).ready(function () {
         $('#main_content').headsmart()
       })
-    </script>
+  </script>
+  <style type="text/css">
+      .fullwidth {
+          width: 100%;
+    }
+  </style>
     <title>Briefwahlhelper by frankhildebrandt</title>
   </head>
 
@@ -50,19 +55,19 @@
           <h3>Antrag zur Briefwahl, für die <select id="wahl" name="wahl"></select></h3>
 
           <p>Meine Stadt/Gemeinde:</p>
-          <select id="gemeinde" name="gemeinde"></select>
+          <select id="gemeinde" name="gemeinde" class="fullwidth"></select>
 
           <p>1. Vollst&auml;ndiger Name, Vorname:</p>
-          <input type="TEXT" id="name" name="name" />
+          <input type="TEXT" id="name" name="name" class="fullwidth" />
           <p>2. Geburtsdatum:</p>
-          <input type="TEXT" id="datum" name="datum" />
+          <input type="TEXT" id="datum" name="datum" class="fullwidth" />
           <p>3. die Wohnungsanschrift (Meldeadresse)</p>
-          <input type="TEXT" id="adresse" name="adresse" />
+          <input type="TEXT" id="adresse" name="adresse" class="fullwidth" />
           <p>4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen</p>
-          <input type="TEXT" id="versand" name="versand" />
+          <input type="TEXT" id="versand" name="versand" class="fullwidth" />
 
           <h3>Die fertige eMail</h3>
-          <textarea rows="15" name="textarea" id="textarea"></textarea>
+          <textarea rows="15" name="textarea" id="textarea" class="fullwidth"></textarea>
           <input type="BUTTON" id="senden" value="eMail mit eMailprogramm versenden" />
         </form>
       </section>
