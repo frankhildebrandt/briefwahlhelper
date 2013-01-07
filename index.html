@@ -26,14 +26,14 @@
         }
 
         function render() {
-            var text = "<p>Sehr geehrte Damen und Herren,</p>\n";
-            text += "<p>hiermit beantrage ich für mich Briefwahlunterlagen, da ich am "+ $("#wahl").find(":selected").val() +" nicht in meinem Wahlbezirk wählen kann. </p>\n";
-            text += "<p>1. Vollständiger Name, Vorname: <br/>"+$("#name").val()+"</p>\n";
-            text += "<p>2. Geburtsdatum: \n"+ $("#datum").val() +"</p>\n";
-            text += "<p>3. die Wohnungsanschrift (Meldeadresse) \n"+ $("#adresse").val() +"</p>\n";
-            text += "<p>4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen \n"+ $("#versand").val() +"</p>\n";
-            text += "<p>Mit freundlichen Grüßen</p>\n";
-            text += "<p>"+$("#name").val()+"</p>";
+            var text = "Sehr geehrte Damen und Herren, \n\n";
+            text += "hiermit beantrage ich fuer mich Briefwahlunterlagen, da ich am "+ $("#wahl").find(":selected").val() +" nicht in meinem Wahlbezirk wählen kann. \n\n";
+            text += "1. Vollständiger Name, Vorname: <br/>"+$("#name").val()+"\n\n";
+            text += "2. Geburtsdatum: \n"+ $("#datum").val() +"\n\n";
+            text += "3. die Wohnungsanschrift (Meldeadresse) \n"+ $("#adresse").val() +"\n\n";
+            text += "4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen \n"+ $("#versand").val() +"\n\n";
+            text += "Mit freundlichen Gruessen\n";
+            text += ""+$("#name").val()+"\n";
             $("#textarea").html( text );
             $("#email").text( $("#gemeinde").find(":selected").val() );
 
@@ -54,7 +54,13 @@
               $("#name").change( render );
               $("#datum").change( render );
               $("#versand").change( render );
-              $("#adresse").change( render );
+              $("#adresse").change( function() {
+                  if ($("#versand").val() == "") {
+                    $("#versand").val( $("#adresse").val() );
+                  }
+                  render();
+                  
+                } );
               $("#gemeinde").change( render );
               
       })
