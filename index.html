@@ -33,6 +33,9 @@
             text += "Mit freundlichen Grüßen\n";
             text += $("#name").val();
             $("#textarea").text( text );
+            $("#email").text( $("#gemeinde").find(":selected").val() );
+
+            $("#maillink".text('<a href="mailto:' + $("#gemeinde").find(":selected").val() +'?subject=Antrag%20auf%20Briefahlunterlagen&body=' + $('#textarea').text() + '">' + 'eMail mit Standardmailprogramm versenden' + '<' + '/a>');
         }
 
       $(document).ready(function () {
@@ -50,6 +53,7 @@
               $("#datum").change( render );
               $("#versand").change( render );
               $("#adresse").change( render );
+              $("#gemeinde").change( render );
               
       })
   </script>
@@ -102,9 +106,9 @@
           <p>4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen</p>
           <input type="TEXT" id="versand" name="versand" class="fullwidth" />
 
-          <h3>Die fertige eMail</h3>
+          <h3>Die fertige eMail an <p id="email"></p></h3>
           <textarea rows="15" name="textarea" id="textarea" class="fullwidth"></textarea>
-          <input type="BUTTON" id="senden" value="eMail mit eMailprogramm versenden" />
+          <p id="maillink"></p>
         </form>
       </section>
 
