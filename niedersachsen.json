@@ -1,3 +1,5 @@
 [
-    { "name": "Stadt Oldenburg", "email": "briefwahl@stadt-oldenburg.de" }
+    { "name": "--- Bitte auswählen ---", "email": "---"},
+    { "name": "Stadt Oldenburg", "email": "briefwahl@stadt-oldenburg.de"},
+    { "name": "Stadt Wilhelmshaven", "email": "wahlamt@stadt.wilhelmshaven.de"}
 ]
