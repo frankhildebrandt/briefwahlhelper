@@ -25,13 +25,13 @@
         }
 
         function render() {
-            var text = "Sehr geehrte Damen und Herren, \n hiermit beantrage ich für mich Briefwahlunterlagen, da ich am "+ $("#wahl").find(":selected").text() +" nicht in meinem Wahlbezirk wählen kann. \n\n";
-            text += "1. Vollständiger Name, Vorname: \n"+$("#name").text()+"\n\n";
+            var text = "Sehr geehrte Damen und Herren, \n\nhiermit beantrage ich für mich Briefwahlunterlagen, da ich am "+ $("#wahl").find(":selected").value() +" nicht in meinem Wahlbezirk wählen kann. \n\n";
+            text += "1. Vollständiger Name, Vorname: \n"+$("#name").value()+"\n\n";
             text += "2. Geburtsdatum: \n"+ $("#datum").text() +"\n\n";
-            text += "3. die Wohnungsanschrift (Meldeadresse) \n"+ $("#adresse").text() +"\n\n";
-            text += "4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen \n"+ $("#versand").text() +"\n\n";
+            text += "3. die Wohnungsanschrift (Meldeadresse) \n"+ $("#adresse").value() +"\n\n";
+            text += "4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen \n"+ $("#versand").value() +"\n\n";
             text += "Mit freundlichen Grüßen\n";
-            text += $("#name").text();
+            text += $("#name").value();
             $("#textarea").text( text );
         }
 
@@ -43,6 +43,7 @@
 
                  });
                  loadRegion();
+                 render();
                  });
               $("#wahl").change( render );
               $("#name").change( render );
