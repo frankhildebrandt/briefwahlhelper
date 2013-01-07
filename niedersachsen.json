@@ -1,5 +1,7 @@
 [
     { "name": "--- Bitte auswählen ---", "email": "---"},
+    { "name": "Stadt Hannover", "email": "Briefwahl@Hannover-Stadt.de"},
     { "name": "Stadt Oldenburg", "email": "briefwahl@stadt-oldenburg.de"},
-    { "name": "Stadt Wilhelmshaven", "email": "wahlamt@stadt.wilhelmshaven.de"}
+    { "name": "Stadt Wilhelmshaven", "email": "wahlamt@stadt.wilhelmshaven.de"},
+    { "name": "Gemeinde Wildeshausen", "email": "heike.eylers@wildeshausen.de"}
 ]
