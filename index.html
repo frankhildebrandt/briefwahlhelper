@@ -35,7 +35,7 @@
             $("#textarea").text( text );
             $("#email").text( $("#gemeinde").find(":selected").val() );
 
-            $("#maillink".text('<a href="mailto:' + $("#gemeinde").find(":selected").val() +'?subject=Antrag%20auf%20Briefahlunterlagen&body=' + $('#textarea').text() + '">' + 'eMail mit Standardmailprogramm versenden' + '<' + '/a>');
+            $("#maillink").text('<a href="mailto:' + $("#gemeinde").find(":selected").val() +'?subject=Antrag%20auf%20Briefahlunterlagen&body=' + $('#textarea').text() + '">' + 'eMail mit Standardmailprogramm versenden' + '<' + '/a>');
         }
 
       $(document).ready(function () {
