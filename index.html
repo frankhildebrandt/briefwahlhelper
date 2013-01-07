@@ -14,7 +14,7 @@
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
     <script type="text/javascript">
         function loadRegion() {
-            $("#gemeinde").innerHTML("");
+            $("#gemeinde").html("");
             var regionFile = $("#wahl").find(":selected").data("bezirk");
             $.getJSON(regionFile, function(data) {
                     $.each(data, function(key, val) {
