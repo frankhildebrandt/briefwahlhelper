@@ -34,7 +34,7 @@
             text += "<p>4. die Versandadresse, an die die Briefunterlagen geschickt werden sollen \n"+ $("#versand").val() +"</p>\n";
             text += "<p>Mit freundlichen Grüßen</p>\n";
             text += "<p>"+$("#name").val()+"</p>";
-            $("#textarea").text( text );
+            $("#textarea").html( text );
             $("#email").text( $("#gemeinde").find(":selected").val() );
 
             $("#maillink").html('<a href="mailto:' + $("#gemeinde").find(":selected").val() +'?subject=Antrag%20auf%20Briefahlunterlagen&body=' + $('#textarea').text() + '">' + 'eMail mit Standardmailprogramm versenden' + '<' + '/a>');
