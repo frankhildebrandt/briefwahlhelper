@@ -13,13 +13,28 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
     <script type="text/javascript">
+        function loadRegion() {
+            $("#gemeinde").innerHTML("");
+            var regionFile = $("#wahl").find(":selected").data("bezirk");
+            $.getJSON(regionFile, function(data) {
+                    $.each(data, function(key, val) {
+                         $("<option value='"+ val['email'] +"'>"+ val['name'] +"</option>").appendTo("#gemeinde");
+                    });
+            });
+
+        }
+
+
       $(document).ready(function () {
               $('#main_content').headsmart();
               $.getJSON('wahl.json', function(data) {
-                 $.each(data, function(key, val) {
-                     $("<option value='"+ val['datum'] +"' data-bezirk='"+ val['bezirk']+"'>"+ val['wahl'] +"</option>").appendTo("#wahl");
+                  $.each(data, function(key, val) {
+                       $("<option value='"+ val['datum'] +"' data-bezirk='"+ val['bezirk']+"'>"+ val['wahl'] +"</option>").appendTo("#wahl");
+
                  });
+                 loadRegion();
                 });
+              
       })
   </script>
   <style type="text/css">
